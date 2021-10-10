@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block title %}
+Market Page
+{% endblock %}
+{% block content %}
+<script>
+   var a='hello';
+</script>
+<!-- <div class="row" style="margin-top:20px; margin-left:20px">
+   <div class="col">
+      <h2>Available items on the Market</h2>
+      <p>Click on one of the items to start buying</p>
+      <br>
+      <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+
+               <th scope="col">S.no.</th>
+               <th scope="col">instrument</th>
+               <th scope="col">trigger according</th>
+               <th scope="col">value</th>
+               <th scope="col">quantity</th>
+            </tr>
+        </thead> -->
+         <!-- <tbody>
+
+          {% for item in range(1,5) %} -->
+
+            <!-- <form action="/market_page" method="POST" name="sentMessage"></form>
+            <tr>
+               <td>{{ item }}</td>
+               <td><input type="text" id="ins" name="ins" placeholder="instrument"></td>
+               <td><input type="text" id="trigg" name="trigg" placeholder="trigger according">
+               <td>
+               <td><input type="text" id="val" name="val" placeholder="value">
+               <td>
+               <td><input type="text" id="quan" name="quan" placeholder="quantity"></td>
+
+            </tr> -->
+
+            <!-- {% endfor %} -->
+         <!-- </tbody>
+      </table>
+      </form>
+
+      <input class="btn btn-outline btn-success" type="submit" value="Submit">
+
+   </div> -->
+<!-- </div> --> 
+
+<body class="text-center">
+   <div class="container">
+       <form method="POST" class="form-signin" style="color:white">
+           {{ form.hidden_tag() }}
+           <br>
+           <h1 class="h3 mb-3 font-weight-normal">
+               Please fill the form 
+           </h1>
+           <br>
+
+           
+          <div style="position:fixed; left:0px; top:200px; width: 200px; margin-left: 200px;">
+            <h3>1. </h3>
+           {{ form.stock1(class="form-control", placeholder="Stock", value=data['instrument'].iloc[0]) }}
+           {{ form.trigger1(class="form-control", placeholder="trigger according to", value=data['trigger'].iloc[0]) }}
+            {{ form.stop_value1(class="form-control", placeholder="Stop_value",value=data['stop_value'].iloc[0]) }}
+            {{ form.limit_value1(class="form-control", placeholder="Limit_value",value=data['limit_value'].iloc[0]) }}
+            {{ form.type1(class="form-control", placeholder="type",value=data['type'].iloc[0]) }}
+            {{ form.quantity1(class="form-control", placeholder="quantity",value=data['quantity'].iloc[0]) }}
+            {{ form.order1(class="form-control", placeholder="order",value=data['buy/sell'].iloc[0]) }}
+         </div>
+         <div style="position:fixed; left:200px; top:200px; width: 200px; margin-left: 200px;">
+           <h3>2. </h3>
+            {{ form.stock2(class="form-control", placeholder="Stock",value=data['instrument'].iloc[1]) }}
+            {{ form.trigger2(class="form-control", placeholder="trigger according to",value=data['trigger'].iloc[1]) }}
+             {{ form.stop_value2(class="form-control", placeholder="Stop_value",value=data['stop_value'].iloc[1]) }}
+             {{ form.limit_value2(class="form-control", placeholder="Limit_value",value=data['limit_value'].iloc[1]) }}
+             {{ form.type2(class="form-control", placeholder="type",value=data['type'].iloc[1]) }}
+             {{ form.quantity2(class="form-control", placeholder="quantity",value=data['quantity'].iloc[1]) }}
+             {{ form.order2(class="form-control", placeholder="order",value=data['buy/sell'].iloc[1]) }}
+
+             </div>
+             <div style="position:fixed; left:400px; top:200px; width: 200px; margin-left: 200px;">
+             <h3>3. </h3>
+             {{ form.stock3(class="form-control", placeholder="Stock",value=data['instrument'].iloc[2]) }}
+             {{ form.trigger3(class="form-control", placeholder="trigger according to",value=data['trigger'].iloc[2]) }}
+              {{ form.stop_value3(class="form-control", placeholder="Stop_value",value=data['stop_value'].iloc[2]) }}
+              {{ form.limit_value3(class="form-control", placeholder="Limit_value",value=data['limit_value'].iloc[2]) }}
+              {{ form.type3(class="form-control", placeholder="type",value=data['type'].iloc[2]) }}
+              {{ form.quantity3(class="form-control", placeholder="quantity",value=data['quantity'].iloc[2]) }}
+              {{ form.order3(class="form-control", placeholder="order",value=data['buy/sell'].iloc[2]) }}
+
+
+            </div>
+            <div style="position:fixed; left:600px; top:200px; width: 200px; margin-left: 200px;">
+              <h3>4. </h3>
+              {{ form.stock4(class="form-control", placeholder="Stock",value=data['instrument'].iloc[3]) }}
+              {{ form.trigger4(class="form-control", placeholder="trigger according to",value=data['trigger'].iloc[3]) }}
+               {{ form.stop_value4(class="form-control", placeholder="Stop_value",value=data['stop_value'].iloc[3]) }}
+               {{ form.limit_value4(class="form-control", placeholder="Limit_value",value=data['limit_value'].iloc[3]) }}
+               {{ form.type4(class="form-control", placeholder="type",value=data['type'].iloc[3]) }}
+               {{ form.quantity4(class="form-control", placeholder="quantity",value=data['quantity'].iloc[3]) }}
+               {{ form.order4(class="form-control", placeholder="order",value=data['buy/sell'].iloc[3]) }}
+
+            </div>
+            <div style="position:fixed; left:800px; top:200px; width: 200px; margin-left: 200px;">
+               <h3>5. </h3>
+               {{ form.stock5(class="form-control", placeholder="Stock",value=data['instrument'].iloc[4]) }}
+               {{ form.trigger5(class="form-control", placeholder="trigger according to",value=data['trigger'].iloc[4]) }}
+                {{ form.stop_value5(class="form-control", placeholder="Stop_value",value=data['stop_value'].iloc[4]) }}
+                {{ form.limit_value5(class="form-control", placeholder="Limit_value",value=data['limit_value'].iloc[4]) }}
+                {{ form.type5(class="form-control", placeholder="type",value=data['type'].iloc[4]) }}
+                {{ form.quantity5(class="form-control", placeholder="quantity",value=data['quantity'].iloc[4]) }}
+                {{ form.order5(class="form-control", placeholder="order",value=data['buy/sell'].iloc[4]) }}
+
+
+
+               
+               </div>
+
+               <div style="position:relative; left:100px; top:400px; width: 800px; ">
+                  {{ form.apikey(class="form-control", placeholder="API key",value=data1['system'].iloc[2]) }}
+                  {{ form.apisecretkey(class="form-control", placeholder="API Secret key",value=data1['system'].iloc[3]) }}
+               </div>
+
+
+           <br>
+
+
+           <div style="position:relative; top:400px; ">
+           {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            </div>
+
+
+ 
+
+
+      
+
+       </form>
+   </div>
+</body>
+
+{% endblock %}

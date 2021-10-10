@@ -1,0 +1,6 @@
+,instrument,trigger,stop_value,limit_value,type,quantity,buy/sell
+0,BTCUSDT,PRICE,43000,46000,LIMIT,34,buy
+1,BTCUSDT,PRICE,48000,34000,STOP-LIMIT,34,sell
+2,BTCUSDT,PRICE,43000,12000,LIMIT,53,buy
+3,BTCUSDT,PERCENTAGE,48000,2.5,LIMIT,56,close below
+4,N,N,N,N,N,N,N
